@@ -1,0 +1,9 @@
+-----------------------------------------------------------
+                          LEVEL03
+-----------------------------------------------------------
+
+4. Pour enfin obtenir le mdp pour passer au niveau 1 en 
+   utilisant la commande getflag
+   --------------------------------------------------------
+    CM : getflag
+    OUTPUT : Check flag.Here is your token : kooda2puivaav1idi4f57q8iq

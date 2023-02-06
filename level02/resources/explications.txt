@@ -1,0 +1,20 @@
+-----------------------------------------------------------
+                          LEVEL02
+-----------------------------------------------------------
+
+1. Transferer les fichiers de la VM vers le PC pour ensuite
+   utiliser WireShark
+   --------------------------------------------------------
+   CM : scp -P 4242 level02@localhost:./level02.pcap .
+
+4. Il suffit maintenant de se connecter en sudo sur flag00
+   en spécifiant le mdp trouver
+   --------------------------------------------------------
+    CM : su flag01
+    OUTPUT : Password : abcdefg
+
+5. Pour enfin obtenir le mdp pour passer au niveau 1 en 
+   utilisant la commande getflag
+   --------------------------------------------------------
+    CM : getflag
+    OUTPUT : Check flag.Here is your token : f2av5il02puano7naaf6adaaf

@@ -19,13 +19,13 @@
    e. Ce qui donne le mdp suivant en UTF8 :
       ft_wandr���NDRel�L0L
 
-4. Il suffit maintenant de se connecter en sudo sur flag00
+3. Il suffit maintenant de se connecter en sudo sur flag00
    en spécifiant le mdp trouver
    --------------------------------------------------------
     CM : su flag02
     OUTPUT : Password : ft_wandrNDRelL0L
 
-5. Pour enfin obtenir le mdp pour passer au niveau 1 en 
+4. Pour enfin obtenir le mdp pour passer au niveau 1 en 
    utilisant la commande getflag
    --------------------------------------------------------
     CM : getflag

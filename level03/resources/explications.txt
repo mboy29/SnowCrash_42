@@ -28,5 +28,6 @@
    meme appel le script /bin/getflag on obtient donc le flag
    --------------------------------------------------------
    CM : ./level03
-   OUTPUT : Here is your token : qi0maab88jeaj46qoumi7maus
+   OUTPUT : Check flag.
+            Here is your token : qi0maab88jeaj46qoumi7maus
 

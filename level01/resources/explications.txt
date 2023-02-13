@@ -27,7 +27,7 @@
     CM : su flag01
     OUTPUT : Password : abcdefg
 
-5. Pour enfin obtenir le mdp pour passer au niveau 1 en 
+5. Pour enfin obtenir le mdp pour passer au niveau 2 en 
    utilisant la commande getflag
    --------------------------------------------------------
     CM : getflag

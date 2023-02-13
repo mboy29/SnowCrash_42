@@ -25,7 +25,7 @@
     CM : su flag02
     OUTPUT : Password : ft_wandrNDRelL0L
 
-4. Pour enfin obtenir le mdp pour passer au niveau 1 en 
+4. Pour enfin obtenir le mdp pour passer au niveau 3 en 
    utilisant la commande getflag
    --------------------------------------------------------
     CM : getflag

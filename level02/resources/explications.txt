@@ -22,11 +22,11 @@
 3. Il suffit maintenant de se connecter en sudo sur flag00
    en spécifiant le mdp trouver
    --------------------------------------------------------
-    CM : su flag02
-    OUTPUT : Password : ft_wandrNDRelL0L
+   CM : su flag02
+   OUTPUT : Password : ft_wandrNDRelL0L
 
 4. Pour enfin obtenir le mdp pour passer au niveau 3 en 
    utilisant la commande getflag
    --------------------------------------------------------
-    CM : getflag
-    OUTPUT : Check flag.Here is your token : kooda2puivaav1idi4f57q8iq
+   CM : getflag
+   OUTPUT : Check flag.Here is your token : kooda2puivaav1idi4f57q8iq

@@ -8,7 +8,7 @@
    CM : ls
    OUTPUT : level09 token
 
-2. On exécute level08 une première fois sans paramètre
+2. On exécute level10 une première fois sans paramètre
    --------------------------------------------------------
    CM : ./level09
    OUTPUT : You need to provied only one arg.

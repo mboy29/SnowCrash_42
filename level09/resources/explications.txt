@@ -2,8 +2,7 @@
                           LEVEL09
 -----------------------------------------------------------
 
-1. On regarde les fichiers mis à notre disposition, on
-   a un executable 
+1. On regarde les fichiers mis à notre disposition
    --------------------------------------------------------
    CM : ls
    OUTPUT : level09 token
@@ -40,15 +39,15 @@
    l'index et non qui l'additionne
    (./level09/resources/script.py) :
    --------------------------------------------------------
-   value = raw_input()
+   SCRIPT : value = raw_input()
 
-   output = ""
-   i = 0
-   for c in value:
-      output += chr((ord(c) - i) % 128)
-      i += 1
+            output = ""
+            i = 0
+            for c in value:
+               output += chr((ord(c) - i) % 128)
+               i += 1
 
-   print (output)
+            print (output)
 
 5. On exécute notre script avec le contenu du fichier token 
    --------------------------------------------------------

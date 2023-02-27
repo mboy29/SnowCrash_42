@@ -2,8 +2,7 @@
                           LEVEL08
 -----------------------------------------------------------
 
-1. On regarde les fichiers mis à notre disposition, on
-   a un executable 
+1. On regarde les fichiers mis à notre disposition :
    --------------------------------------------------------
    CM : ls
    OUTPUT : level08 token

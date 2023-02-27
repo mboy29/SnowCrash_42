@@ -83,9 +83,9 @@
 
             [...]
 
-6. Il suffit maintenant de get le flag pour le niveau
+8. Il suffit maintenant de get le flag pour le niveau
    suivant avec la commande getflag
    --------------------------------------------------------
    CM : getflag 
    OUTPUT : Check flag.
-            Here is your token : woupa2yuojeeaaed06riuj63c 
+            Here is your token : feulo4b72j7edeahuete3no7c 

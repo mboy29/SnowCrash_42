@@ -36,8 +36,9 @@
    OUTPUT : f4kmm6p|=�p�n��DB�Du{��
 
 4. On créé donc un petit script python qui produit le
-   comportement inverse du script level09 (qui soustrait
-   l'index et non qui l'additionne):
+   comportement inverse du script level09, ce dernier soustrait
+   l'index et non qui l'additionne
+   (./level09/resources/script.py) :
    --------------------------------------------------------
    value = raw_input()
 

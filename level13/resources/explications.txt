@@ -65,7 +65,7 @@
    on met a jour la valeur du registre en faisant set
    $eax=4242. 2 steps apres le breakpoint, on obtient: 
    --------------------------------------------------------
-   CM : step set $eax=4242
+   CM : step { && } set $eax=4242 { x 2 }
    OUTPUT : Single stepping until exit from function main,
             which has no line number information.
             your token is 2A31L79asukciNyi8uppkEuSx

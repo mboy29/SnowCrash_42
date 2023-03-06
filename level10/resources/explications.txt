@@ -4,14 +4,14 @@
 
 1. On regarde les fichiers mis à notre disposition :
    --------------------------------------------------------
-   CM : ls
+   CMD : ls
    OUTPUT : level10 token
 
 2. On effectue la commande string sur le l'executable
    level10. On constate que le script level10 utilise les
    fonctions access et open. 
    --------------------------------------------------------
-   CM : strings level10
+   CMD : strings level10
    OUTPUT : [...]
             access
             open
@@ -24,7 +24,7 @@
    fichier peut etre swap avec un autre, et ce second sera 
    ouvert independament de ses autorisations.
    --------------------------------------------------------
-   CM : man access
+   CMD : man access
    OUTPUT : [...]
             Warning: Using access() to check if a user is 
             authorized to, for example, open a file before 
@@ -39,7 +39,7 @@
 5. De fait, on créé un fichier tests qui contient une
    string au choix :
    --------------------------------------------------------
-   CM : echo "Snowcrash : Level 10 !" > /tmp/tests
+   CMD : echo "Snowcrash : Level 10 !" > /tmp/tests
 
 4. Par la suit, on réalise un script bash qui va venir 
    swapperun fichier /tmp/tests avec le fichier token avec un 
@@ -57,14 +57,14 @@
    on va se connecter à la VM et que l'on va mettre entre
    mode écoute infini sur le réseau.
    --------------------------------------------------------
-   CM : nc -lk localhost 6969
+   CMD : nc -lk localhost 6969
 
 6. Enfin, on re-ouvre un troisième et dernier terminal dans
    lequel on va se re-connecter de nouveau à la VM et où
    l'on va exécuter le fichier level10 en boucle sur le
    même réseau que netcat (localhost/127.0.01).
    --------------------------------------------------------
-   CM : while : ; do ./level10 /tmp/swap 127.0.0.1; done
+   CMD : while : ; do ./level10 /tmp/swap 127.0.0.1; done
 
 7. Maintenant, on obtient le contenu des 2 fichiers token
    et /tmp/tests à interval régulier dans l'onglet de 
@@ -85,6 +85,6 @@
 8. Il suffit maintenant de get le flag pour le niveau
    suivant avec la commande getflag
    --------------------------------------------------------
-   CM : getflag 
+   CMD : getflag 
    OUTPUT : Check flag.
             Here is your token : feulo4b72j7edeahuete3no7c 

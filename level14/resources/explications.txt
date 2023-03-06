@@ -6,13 +6,13 @@
    pour ce niveau, on suppose qu'il faut qu'on utilise
    d'une façon ou d'une autre commande getflag.
    --------------------------------------------------------
-   CM : ls -la
+   CMD : ls -la
    OUTPUT : { nothing at all... :'( }
 
 2. En effectuant un string sur notre /bin/getflag, l'on 
    apperçoit que ce dernier utilise la fonction getuid()
    --------------------------------------------------------
-   CM : strings /bin/getflag
+   CMD : strings /bin/getflag
    OUTPUT : [...]
             getuid
             [...]
@@ -21,7 +21,7 @@
    run avec un breaking point sur getuid mais cela nous 
    renvoie une erreur. 
    --------------------------------------------------------
-   CM : break getflag 
+   CMD : break getflag 
    OUTPUT : Starting program: /bin/getflag
             You should not reverse this
             [Inferior 1 (process 2264) exited with code 01]
@@ -33,7 +33,7 @@
    que ptrace n'empeche pas de continuer l'execution malgrès
    un probleme de permission.
    --------------------------------------------------------
-   CM : strings /bin/getflag
+   CMD : strings /bin/getflag
    OUTPUT : [...]
             ptrace
             [...]
@@ -43,7 +43,7 @@
 5. Préalablement, on guette l'UID de notre flag14 avec la 
    commande id : 3014.
    --------------------------------------------------------
-   CM : id flag14
+   CMD : id flag14
    OUTPUT : uid=3014(flag14) 
             gid=3014(flag14) 
             groups=3014(flag14)
@@ -54,10 +54,10 @@
    catch syscall ptrace, commands 1, set ($eax) = 0, 
    continue et end.
    --------------------------------------------------------
-   a. CM : catch syscall ptrace
+   a. CMD : catch syscall ptrace
       OUTPUT : Catchpoint 1 (syscall 'ptrace' [26])
    
-   b. CM : commands 1
+   b. CMD : commands 1
       OUTPUT : Type commands for breakpoint(s) 1, one per line.
                End with a line saying just "end".
                >set ($eax) = 0
@@ -68,10 +68,10 @@
 5. On remet un breaking point sur getuid et on run notre 
    programme dans gdb.
    --------------------------------------------------------
-   a. CM : b getuid
+   a. CMD : b getuid
       OUTPUT : Breakpoint 2 at 0xb7ee4cc0
    
-   b. CM : run 
+   b. CMD : run 
       OUTPUT : Starting program: /bin/getflag
 
                Catchpoint 1 (call to syscall ptrace),
@@ -89,7 +89,7 @@
    on met a jour la valeur du registre en faisant set
    $eax=3014. 2 steps apres le breakpoint, on obtient: 
    --------------------------------------------------------
-   CM : step { && } set $eax=4242 { x 12 }
+   CMD : step { && } set $eax=4242 { x 2 }
    OUTPUT : Single stepping until exit from function main,
             which has no line number information.
             Check flag.Here is your token : 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ

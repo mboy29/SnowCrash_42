@@ -5,18 +5,18 @@
 1. On regarde les fichiers mis à notre disposition, on
    a un executable :
    --------------------------------------------------------
-   CM : ls
+   CMD : ls
    OUTPUT : level13
 
 2. On exécute notre executable
    --------------------------------------------------------
-   CM : ./level13
+   CMD : ./level13
    OUTPUT : UID 2013 started us but we we expect 4242
 
 3. En effectuant un string sur notre executable, l'on 
    apperçoit que ce dernier utilise la fonction getuid()
    --------------------------------------------------------
-   CM : strings level13
+   CMD : strings level13
    OUTPUT : [...]
             getuid
             [...]
@@ -31,18 +31,18 @@
    valeur demandé lors de l'execution de notre executable 
    : 4242.
    --------------------------------------------------------
-   a. CM : break main
+   a. CMD : break main
       OUTPUT : Breakpoint 1 at 0x804858f 
 
-   b. CM : run 
+   b. CMD : run 
       OUTPUT : Starting program: /home/user/level13/level13
                Breakpoint 1, 0x0804858f in main () 
 
-   c. CM : disassemble
+   c. CMD : disassemble
       OUTPUT : Dump of assembler code for function main:
                [...]
                0x08048595 <+9>:	call   0x8048380 <getuid@plt>
-               0x0804859a <+14>:	cmp    $0x1092,%eax
+               0x0804859a <+14>:	CMDp    $0x1092,%eax
                [...]
                End of assembler dump.
 
@@ -50,10 +50,10 @@
    la commande b getuid et on relance le programme dans gdb en 
    faisant run. 
    --------------------------------------------------------
-   a. CM : b getuid
+   a. CMD : b getuid
       OUTPUT : Breakpoint 2 at 0xb7ee4cc0
 
-   b. CM : run 
+   b. CMD : run 
       OUTPUT : The program being debugged has been started already.
                Start it from the beginning? (y or n) y
                Starting program: /home/user/level13/level13
@@ -65,7 +65,7 @@
    on met a jour la valeur du registre en faisant set
    $eax=4242. 2 steps apres le breakpoint, on obtient: 
    --------------------------------------------------------
-   CM : step { && } set $eax=4242 { x 2 }
+   CMD : step { && } set $eax=4242 { x 2 }
    OUTPUT : Single stepping until exit from function main,
             which has no line number information.
             your token is 2A31L79asukciNyi8uppkEuSx

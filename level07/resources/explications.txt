@@ -5,12 +5,12 @@
 1. On regarde les fichiers mis à notre disposition, on
    a un executable 
    --------------------------------------------------------
-   CM : ls
+   CMD : ls
    OUTPUT : level07
 
 2. On get les strings à l'intérieur de cette executable 
    --------------------------------------------------------
-   CM : strings level07
+   CMD : strings level07
    OUTPUT : [...]
             LOGNAME
             /bin/echo %s
@@ -24,6 +24,6 @@
    pour concatenner avec l'éventuel continu précédemt) 
    dans LOGNAME et on execute.
    --------------------------------------------------------
-   CM : export LOGNAME=';getflag' && ./level07
+   CMD : export LOGNAME=';getflag' && ./level07
    OUTPUT : Check flag.
             Here is your token : fiumuikeil55xe9cu4dood66h

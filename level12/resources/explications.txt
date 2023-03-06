@@ -45,6 +45,7 @@
    OUTPUT : Broadcast Message from flag12@Snow
             (somewhere) at 14:44 ...
 
-            Check flag.Here is your token : g1qKMiRpXf53AWhDaU7FEkczr
+            Check flag.
+            Here is your token : g1qKMiRpXf53AWhDaU7FEkczr
 
             ..
